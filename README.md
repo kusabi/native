@@ -33,3 +33,26 @@ Or simply add it to your `composer.json` file
     }
 }
 ```
+
+## String functions
+
+This library adds a number of strings functions to extend PHP's native functionality
+
+Below you can find links to the documentation for the new features.
+
+
+| Function | Description |
+| --- | ----------- |
+| [str_case_camel](documentation/str_case_camel.md) | Converts a string to `camelCase` |
+| [str_case_kebab](documentation/str_case_kebab.md) | Converts a string to `kebab-case` |
+| [str_case_pascal](documentation/str_case_pascal.md) | Converts a string to `PascalCase` |
+| [str_case_sentence](documentation/str_case_sentence.md) | Converts a string to `Sentence case` |
+| [str_case_snake](documentation/str_case_snake.md) | Converts a string to `snake_case` |
+| [str_case_title](documentation/str_case_title.md) | Converts a string to `Title Case` |
+| [str_cipher_caesar](documentation/str_cipher_caesar.md) | Transform a string by shifting each letter up or down the alphabet |
+| [str_cipher_caesar_reverse](documentation/str_cipher_caesar.md) | Reverse the effects of `str_cipher_caesar` |
+| [str_cipher_mono_alphabetic](documentation/str_cipher_mono_alphabetic.md) | Transform a string by mapping each letter to another alphabet |
+| [str_contains](documentation/str_contains.md) | Determine if a string contains another string |
+| [str_ends_with](documentation/str_ends_with.md) | Determine if a string ends with another string |
+| [str_slug](documentation/str_slug.md) | Converts a string to a slug |
+| [str_starts_with](documentation/str_starts_with.md) | Determine if a string starts with another string |

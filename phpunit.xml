@@ -1,12 +1,12 @@
-<phpunit bootstrap="vendor/autoload.php" colors="true">
+<phpunit bootstrap="vendor/autoload.php" colors="true" convertErrorsToExceptions="true" convertNoticesToExceptions="true" convertWarningsToExceptions="true" forceCoversAnnotation="true">
     <testsuites>
-        <testsuite name="unit">
-            <directory>tests</directory>
+        <testsuite name="functions">
+            <directory>tests/Functions</directory>
         </testsuite>
     </testsuites>
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
-            <directory suffix=".php">./src</directory>
+            <directory suffix=".php">./functions</directory>
         </whitelist>
     </filter>
     <logging>
