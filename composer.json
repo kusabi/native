@@ -1,0 +1,33 @@
+{
+    "name": "kusabi/native",
+    "description": "A library that extends PHP's native functionality",
+    "type": "library",
+    "license": "mit",
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "authors": [
+        {
+            "name": "Christian Harvey",
+            "email": "kusabi.software@gmail.com"
+        }
+    ],
+    "keywords": [
+        "php",
+        "string"
+    ],
+    "require": {
+        "php": ">=5.4"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^3.4",
+        "phpunit/phpunit": "^5.7",
+        "squizlabs/php_codesniffer": "^3.5",
+        "phpbench/phpbench": "^0.13.0"
+    },
+    "config": {
+        "platform": {
+            "php": "5.6"
+        },
+        "sort-packages": true
+    }
+}
