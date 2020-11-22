@@ -34,6 +34,21 @@ Or simply add it to your `composer.json` file
 }
 ```
 
+## Array functions
+
+This library adds a number of array functions to extend PHP's native functionality
+
+Below you can find links to the documentation for the new features.
+
+
+| Function | Description |
+| --- | ----------- |
+| [array_except](documentation/array_except.md) | Return a subset of the array by passing in an array of keys to discard |
+| [array_exists](documentation/array_exists.md) | Checks if the given key or index exists in the array using dot notation for nested arrays |
+| [array_get](documentation/array_exists.md) | Returns a value from the array, using dot notation for nested sets |
+| [array_only](documentation/array_only.md) | Return a subset of the array by passing in an array of keys to keep |
+| [array_set](documentation/array_set.md) | Set a key in the array using dot notation for nested arrays |
+
 ## String functions
 
 This library adds a number of strings functions to extend PHP's native functionality

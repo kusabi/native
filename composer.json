@@ -26,6 +26,7 @@
     },
     "autoload": {
         "files": [
+            "functions/arrays.php",
             "functions/strings.php"
         ],
         "psr-4": {
