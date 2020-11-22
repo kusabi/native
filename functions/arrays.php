@@ -1,5 +1,32 @@
 <?php
 
+if (!function_exists('array_deflate')) {
+    /**
+     * Flattens a nested array into a single level array.
+     *
+     * By default, it will keep the keys but use a dot notation to indicate depth.
+     *
+     * @param array $array
+     * @param bool $keys
+     *
+     * @return array
+     */
+    function array_deflate(array $array, $keys = true)
+    {
+        $results = [];
+        foreach ($array as $key => $value) {
+            if (is_array($value)) {
+                foreach (array_deflate($value) as $k => $v) {
+                    $results[$key.'.'.$k] = $v;
+                }
+            } else {
+                $results[$key] = $value;
+            }
+        }
+        return $keys ? $results : array_values($results);
+    }
+}
+
 if (!function_exists('array_except')) {
     /**
      * Return a subset of the array by passing in an array of keys to discard
@@ -55,6 +82,26 @@ if (!function_exists('array_get')) {
             $array = &$array[$key];
         }
         return $array;
+    }
+}
+
+if (!function_exists('array_inflate')) {
+    /**
+     * Expands a flattened array back into a nested array.
+     *
+     * This will not work on flattened arrays where the keys were not kept.
+     *
+     * @param array $array
+     *
+     * @return array
+     */
+    function array_inflate(array $array)
+    {
+        $results = [];
+        foreach ($array as $key => $value) {
+            array_set($results, $key, $value);
+        }
+        return $results;
     }
 }
 

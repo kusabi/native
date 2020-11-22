@@ -11,6 +11,30 @@ class ArrayTransform extends Bench
 {
     protected $array;
 
+    protected $deflatedArray;
+
+    protected $nestedArray;
+
+    public function benchDeflateNestedDiscardKeys()
+    {
+        array_deflate($this->nestedArray, false);
+    }
+
+    public function benchDeflateNestedKeepKeys()
+    {
+        array_deflate($this->nestedArray);
+    }
+
+    public function benchDeflateNotNestedDiscardKeys()
+    {
+        array_deflate($this->array, false);
+    }
+
+    public function benchDeflateNotNestedKeepKeys()
+    {
+        array_deflate($this->array);
+    }
+
     public function benchExceptFew()
     {
         array_except($this->array, ['a', 'b', 'c', 'd']);
@@ -18,12 +42,22 @@ class ArrayTransform extends Bench
 
     public function benchExceptMany()
     {
-        array_except($this->array, ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k']);
+        array_except($this->array, ['a', 'b', 'c', 'd', 'e', 'f']);
     }
 
     public function benchExceptNone()
     {
         array_except($this->array, []);
+    }
+
+    public function benchInflateNestedKeys()
+    {
+        array_inflate($this->deflatedArray);
+    }
+
+    public function benchInflateNoNestedKeys()
+    {
+        array_inflate($this->array);
     }
 
     public function benchOnlyFew()
@@ -33,7 +67,7 @@ class ArrayTransform extends Bench
 
     public function benchOnlyMany()
     {
-        array_only($this->array, ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k']);
+        array_only($this->array, ['a', 'b', 'c', 'd', 'e', 'f']);
     }
 
     public function benchOnlyNone()
@@ -43,6 +77,28 @@ class ArrayTransform extends Bench
 
     public function init()
     {
-        $this->array = array_combine(range('a', 'z'), range(1, 26));
+        $this->array = array_combine(range('a', 'i'), range(1, 9));
+        $this->nestedArray = [
+            'a' => 1,
+            'b' => 2,
+            'c' => [
+                'a' => 1,
+                'b' => 2,
+                'c' => [
+                    'a' => 1,
+                    'b' => 2,
+                    'c' => 3
+                ]
+            ]
+        ];
+        $this->deflatedArray = [
+            'a' => 1,
+            'b' => 2,
+            'c.a' => 1,
+            'c.b' => 2,
+            'c.c.a' => 1,
+            'c.c.b' => 2,
+            'c.c.c' => 3,
+        ];
     }
 }
