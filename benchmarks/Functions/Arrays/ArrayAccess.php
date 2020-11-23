@@ -11,6 +11,11 @@ class ArrayAccess extends Bench
 {
     protected $array;
 
+    public function benchArrayAt()
+    {
+        array_at($this->array, 6);
+    }
+
     public function benchArrayExistsDeep()
     {
         array_exists($this->array, 'a.b.c.d.e.f.g.h.i.j.k.l.m.n.o.p.q.r.s.t.u.v.w.x.y.z');
@@ -29,6 +34,11 @@ class ArrayAccess extends Bench
     public function benchArrayGetShallow()
     {
         array_get($this->array, 'a');
+    }
+
+    public function benchArrayKeyAt()
+    {
+        array_key_at($this->array, 6);
     }
 
     public function benchArraySetDeep()

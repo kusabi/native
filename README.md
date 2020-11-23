@@ -43,11 +43,13 @@ Below you can find links to the documentation for the new features.
 
 | Function | Description |
 | --- | ----------- |
+| [array_at](documentation/array_at.md) | Get the nth value from an array |
 | [array_deflate](documentation/array_deflate.md) | Flattens a nested array into a single level array |
 | [array_except](documentation/array_except.md) | Return a subset of the array by passing in an array of keys to discard |
 | [array_exists](documentation/array_exists.md) | Checks if the given key or index exists in the array using dot notation for nested arrays |
 | [array_get](documentation/array_exists.md) | Returns a value from the array, using dot notation for nested sets |
 | [array_inflate](documentation/array_inflate.md) | Expands a flattened array back into a nested array |
+| [array_key_at](documentation/array_key_at.md) | Get the nth key from an array |
 | [array_only](documentation/array_only.md) | Return a subset of the array by passing in an array of keys to keep |
 | [array_set](documentation/array_set.md) | Set a key in the array using dot notation for nested arrays |
 

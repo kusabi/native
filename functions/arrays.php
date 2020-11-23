@@ -1,5 +1,26 @@
 <?php
 
+if (!function_exists('array_at')) {
+    /**
+     * Get the nth value from an array.
+     *
+     * @param array $array
+     * @param int $index
+     *
+     * @return mixed
+     */
+    function array_at(array $array, $index)
+    {
+        if ($index < 0) {
+            $index = count($array) + $index;
+        }
+        if ($index < 0 || $index >= count($array)) {
+            return null;
+        }
+        return $array[array_keys($array)[$index]];
+    }
+}
+
 if (!function_exists('array_deflate')) {
     /**
      * Flattens a nested array into a single level array.
@@ -102,6 +123,27 @@ if (!function_exists('array_inflate')) {
             array_set($results, $key, $value);
         }
         return $results;
+    }
+}
+
+if (!function_exists('array_key_at')) {
+    /**
+     * Get the nth key from an array.
+     *
+     * @param array $array
+     * @param int $index
+     *
+     * @return mixed
+     */
+    function array_key_at(array $array, $index)
+    {
+        if ($index < 0) {
+            $index = count($array) + $index;
+        }
+        if ($index < 0 || $index >= count($array)) {
+            return null;
+        }
+        return array_keys($array)[$index];
     }
 }
 
