@@ -96,8 +96,12 @@ if (!function_exists('str_case_camel')) {
      */
     function str_case_camel($string)
     {
-        preg_match_all('!([A-Za-z][A-Z0-9]*(?=$|[A-Z][a-z0-9])|[A-Za-z][a-z0-9]+)!', $string, $matches);
-        return lcfirst(str_replace('_', '', ucwords(strtolower(implode('_', $matches[0])), '_')));
+        return lcfirst(str_replace('_', '', ucwords(
+            strtolower(
+                preg_replace('/[ _-]|(?<=[^\WA-Z])(?=[A-Z])|(?<=[A-Z])(?=[A-Z][a-z])/', '_', $string)
+            ),
+            '_'
+        )));
     }
 }
 
@@ -111,8 +115,9 @@ if (!function_exists('str_case_kebab')) {
      */
     function str_case_kebab($string)
     {
-        preg_match_all('!([A-Za-z][A-Z0-9]*(?=$|[A-Z][a-z0-9])|[A-Za-z][a-z0-9]+)!', $string, $matches);
-        return strtolower(implode('-', $matches[0]));
+        return strtolower(
+            preg_replace('/[ _-]|(?<=[^\WA-Z])(?=[A-Z])|(?<=[A-Z])(?=[A-Z][a-z])/', '-', $string)
+        );
     }
 }
 
@@ -126,8 +131,12 @@ if (!function_exists('str_case_pascal')) {
      */
     function str_case_pascal($string)
     {
-        preg_match_all('!([A-Za-z][A-Z0-9]*(?=$|[A-Z][a-z0-9])|[A-Za-z][a-z0-9]+)!', $string, $matches);
-        return str_replace('_', '', ucwords(strtolower(implode('_', $matches[0])), '_'));
+        return str_replace('_', '', ucwords(
+            strtolower(
+                preg_replace('/[ _-]|(?<=[^\WA-Z])(?=[A-Z])|(?<=[A-Z])(?=[A-Z][a-z])/', '_', $string)
+            ),
+            '_'
+        ));
     }
 }
 
@@ -141,8 +150,11 @@ if (!function_exists('str_case_sentence')) {
      */
     function str_case_sentence($string)
     {
-        preg_match_all('!([A-Za-z][A-Z0-9]*(?=$|[A-Z][a-z0-9])|[A-Za-z][a-z0-9]+)!', $string, $matches);
-        return ucfirst(strtolower(implode(' ', $matches[0])));
+        return ucfirst(
+            strtolower(
+                preg_replace('/[ _-]|(?<=[^\WA-Z])(?=[A-Z])|(?<=[A-Z])(?=[A-Z][a-z])/', ' ', $string)
+            )
+        );
     }
 }
 
@@ -156,8 +168,9 @@ if (!function_exists('str_case_snake')) {
      */
     function str_case_snake($string)
     {
-        preg_match_all('!([A-Za-z][A-Z0-9]*(?=$|[A-Z][a-z0-9])|[A-Za-z][a-z0-9]+)!', $string, $matches);
-        return strtolower(implode('_', $matches[0]));
+        return strtolower(
+            preg_replace('/[ _-]|(?<=[^\WA-Z])(?=[A-Z])|(?<=[A-Z])(?=[A-Z][a-z])/', '_', $string)
+        );
     }
 }
 
@@ -171,8 +184,11 @@ if (!function_exists('str_case_title')) {
      */
     function str_case_title($string)
     {
-        preg_match_all('!([A-Za-z][A-Z0-9]*(?=$|[A-Z][a-z0-9])|[A-Za-z][a-z0-9]+)!', $string, $matches);
-        return ucwords(strtolower(implode(' ', $matches[0])));
+        return ucwords(
+            strtolower(
+                preg_replace('/[ _-]|(?<=[^\WA-Z])(?=[A-Z])|(?<=[A-Z])(?=[A-Z][a-z])/', ' ', $string)
+            )
+        );
     }
 }
 
