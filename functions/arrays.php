@@ -183,3 +183,26 @@ if (!function_exists('array_set')) {
         $array = $value;
     }
 }
+
+if (!function_exists('array_unset')) {
+    /**
+     * Remove a value from the array using dot notation for nested sets
+     *
+     * @param array &$array
+     * @param string $key
+     *
+     * @return void
+     */
+    function array_unset(array &$array, $key)
+    {
+        $keys = explode('.', $key);
+        $final = array_pop($keys);
+        foreach ($keys as $key) {
+            if (!isset($array[$key])) {
+                return;
+            }
+            $array = &$array[$key];
+        }
+        unset($array[$final]);
+    }
+}
