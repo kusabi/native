@@ -51,6 +51,7 @@ Below you can find links to the documentation for the new features.
 | [array_inflate](documentation/array_inflate.md) | Expands a flattened array back into a nested array |
 | [array_key_at](documentation/array_key_at.md) | Get the nth key from an array |
 | [array_only](documentation/array_only.md) | Return a subset of the array by passing in an array of keys to keep |
+| [array_pull](documentation/array_pull.md) | Return and remove a key in the array using dot notation for nested arrays |
 | [array_set](documentation/array_set.md) | Set a key in the array using dot notation for nested arrays |
 | [array_unset](documentation/array_unset.md) | Remove a key in the array using dot notation for nested arrays |
 

@@ -162,6 +162,31 @@ if (!function_exists('array_only')) {
     }
 }
 
+if (!function_exists('array_pull')) {
+    /**
+     * Return and remove a value from the array using dot notation for nested sets
+     *
+     * @param array &$array
+     * @param string $key
+     *
+     * @return mixed
+     */
+    function array_pull(array &$array, $key)
+    {
+        $keys = explode('.', $key);
+        $final = array_pop($keys);
+        foreach ($keys as $key) {
+            if (!isset($array[$key])) {
+                return null;
+            }
+            $array = &$array[$key];
+        }
+        $value = isset($array[$final]) ? $array[$final] : null;
+        unset($array[$final]);
+        return $value;
+    }
+}
+
 if (!function_exists('array_set')) {
     /**
      * Set a value in the array using dot notation for nested sets

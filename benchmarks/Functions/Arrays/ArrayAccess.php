@@ -41,6 +41,16 @@ class ArrayAccess extends Bench
         array_key_at($this->array, 6);
     }
 
+    public function benchArrayPullDeep()
+    {
+        array_unset($this->array, 'a.b.c.d.e.f.g.h.i.j.k.l.m.n.o.p.q.r.s.t.u.v.w.x.y.z');
+    }
+
+    public function benchArrayPullShallow()
+    {
+        array_unset($this->array, 'a');
+    }
+
     public function benchArraySetDeep()
     {
         $array = [];
