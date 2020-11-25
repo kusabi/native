@@ -187,6 +187,28 @@ if (!function_exists('array_pull')) {
     }
 }
 
+if (!function_exists('array_random')) {
+    /**
+     * Picks one or more random entries out of an array, and returns the value (or values) of the random entries.
+     *
+     * @param array $array
+     * @param int $num
+     *
+     * @return mixed|mixed[]
+     */
+    function array_random(array $array, $num = 1)
+    {
+        $key = @array_rand($array, $num);
+        if ($key === null) {
+            return null;
+        }
+        if (is_array($key)) {
+            return array_only($array, $key);
+        }
+        return $array[$key];
+    }
+}
+
 if (!function_exists('array_set')) {
     /**
      * Set a value in the array using dot notation for nested sets

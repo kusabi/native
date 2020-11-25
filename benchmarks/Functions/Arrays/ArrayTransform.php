@@ -75,6 +75,16 @@ class ArrayTransform extends Bench
         array_only($this->array, []);
     }
 
+    public function benchRandomMultiple()
+    {
+        array_random($this->array, 5);
+    }
+
+    public function benchRandomSingle()
+    {
+        array_random($this->array);
+    }
+
     public function init()
     {
         $this->array = array_combine(range('a', 'i'), range(1, 9));
