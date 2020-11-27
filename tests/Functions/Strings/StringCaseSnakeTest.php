@@ -11,7 +11,7 @@ use PHPUnit\Framework\TestCase;
  * @group case
  * @group str_case_snake
  */
-class CaseSnakeTest extends TestCase
+class StringCaseSnakeTest extends TestCase
 {
     public function provideCases()
     {

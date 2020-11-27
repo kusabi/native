@@ -11,7 +11,7 @@ use PHPUnit\Framework\TestCase;
  * @group case
  * @group str_slug
  */
-class SlugTest extends TestCase
+class StringSlugTest extends TestCase
 {
     public function provideCases()
     {

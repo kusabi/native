@@ -11,7 +11,7 @@ use PHPUnit\Framework\TestCase;
  * @group ciphers
  * @group str_cipher_mono_alphabetic
  */
-class CipherMonoAlphabeticTest extends TestCase
+class StringCipherMonoAlphabeticTest extends TestCase
 {
     public function provideMonoAlphabetic()
     {

@@ -11,7 +11,7 @@ use PHPUnit\Framework\TestCase;
  * @group queries
  * @group str_ends_with
  */
-class EndsWithTest extends TestCase
+class StringEndsWithTest extends TestCase
 {
     public function testEndsWithCaseSensitive()
     {

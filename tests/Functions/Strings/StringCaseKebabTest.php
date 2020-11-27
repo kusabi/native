@@ -11,7 +11,7 @@ use PHPUnit\Framework\TestCase;
  * @group case
  * @group str_case_kebab
  */
-class CaseKebabTest extends TestCase
+class StringCaseKebabTest extends TestCase
 {
     public function provideCases()
     {

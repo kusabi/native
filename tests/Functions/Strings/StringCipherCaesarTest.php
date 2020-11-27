@@ -12,7 +12,7 @@ use PHPUnit\Framework\TestCase;
  * @group ciphers
  * @group str_cipher_caesar
  */
-class CipherCaesarTest extends TestCase
+class StringCipherCaesarTest extends TestCase
 {
     public function provideCaesar()
     {

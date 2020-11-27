@@ -11,7 +11,7 @@ use PHPUnit\Framework\TestCase;
  * @group queries
  * @group str_contains
  */
-class ContainsTest extends TestCase
+class StringContainsTest extends TestCase
 {
     public function testContainsCaseSensitive()
     {
@@ -21,6 +21,11 @@ class ContainsTest extends TestCase
     public function testContainsCharacter()
     {
         $this->assertTrue(str_contains('Hello world', 'w'));
+    }
+
+    public function testContainsEmptyString()
+    {
+        $this->assertTrue(str_contains('Hello world', ''));
     }
 
     public function testContainsFail()

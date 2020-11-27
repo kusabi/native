@@ -11,7 +11,7 @@ use PHPUnit\Framework\TestCase;
  * @group case
  * @group str_camel_case
  */
-class CaseCamelTest extends TestCase
+class StringCaseCamelTest extends TestCase
 {
     public function provideCases()
     {

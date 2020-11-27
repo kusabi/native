@@ -11,7 +11,7 @@ use PHPUnit\Framework\TestCase;
  * @group case
  * @group str_case_pascal
  */
-class CasePascalTest extends TestCase
+class StringCasePascalTest extends TestCase
 {
     public function provideCases()
     {

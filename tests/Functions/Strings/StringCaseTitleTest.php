@@ -11,7 +11,7 @@ use PHPUnit\Framework\TestCase;
  * @group case
  * @group str_case_title
  */
-class CaseTitleTest extends TestCase
+class StringCaseTitleTest extends TestCase
 {
     public function provideCases()
     {

@@ -11,7 +11,7 @@ use PHPUnit\Framework\TestCase;
  * @group queries
  * @group str_starts_with
  */
-class StartsWithTest extends TestCase
+class StringStartsWithTest extends TestCase
 {
     public function testStartsWithCaseSensitive()
     {
