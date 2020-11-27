@@ -76,5 +76,6 @@ Below you can find links to the documentation for the new features.
 | [str_cipher_mono_alphabetic](documentation/str_cipher_mono_alphabetic.md) | Transform a string by mapping each letter to another alphabet |
 | [str_contains](documentation/str_contains.md) | Determine if a string contains another string |
 | [str_ends_with](documentation/str_ends_with.md) | Determine if a string ends with another string |
+| [str_random](documentation/str_random.md) | Creates a string of random characters |
 | [str_slug](documentation/str_slug.md) | Converts a string to a slug |
 | [str_starts_with](documentation/str_starts_with.md) | Determine if a string starts with another string |

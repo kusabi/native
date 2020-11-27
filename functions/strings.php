@@ -217,6 +217,21 @@ if (!function_exists('str_ends_with')) {
     }
 }
 
+if (!function_exists('str_random')) {
+    /**
+     * Creates a string of random characters
+     *
+     * @param int $size
+     * @param string $alphabet
+     *
+     * @return string
+     */
+    function str_random($size, $alphabet = CIPHER_ENGLISH)
+    {
+        return substr(str_repeat($alphabet, ceil($size / strlen($alphabet))), -$size);
+    }
+}
+
 
 if (!function_exists('str_slug')) {
     /**
