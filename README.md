@@ -40,7 +40,6 @@ This library adds a number of array functions to extend PHP's native functionali
 
 Below you can find links to the documentation for the new features.
 
-
 | Function | Description |
 | --- | ----------- |
 | [array_at](documentation/array_at.md) | Get the nth value from an array |
@@ -56,12 +55,24 @@ Below you can find links to the documentation for the new features.
 | [array_set](documentation/array_set.md) | Set a key in the array using dot notation for nested arrays |
 | [array_unset](documentation/array_unset.md) | Remove a key in the array using dot notation for nested arrays |
 
+
+## Class functions
+
+This library adds a number of class functions to extend PHP's native functionality
+
+Below you can find links to the documentation for the new features.
+
+| Function | Description |
+| --- | ----------- |
+| [class_uses_recursive](documentation/class_uses_recursive.md) | Get a deep list of all the traits a class uses |
+| [class_uses_trait](documentation/class_uses_trait.md) | Determine if a class or object uses a trait |
+
+
 ## String functions
 
 This library adds a number of strings functions to extend PHP's native functionality
 
 Below you can find links to the documentation for the new features.
-
 
 | Function | Description |
 | --- | ----------- |
